@@ -1,0 +1,82 @@
+#!/bin/bash
+
+# 🌐 فحص الاتصال بالشبكة باستخدام gh
+check_network() {
+    if ! gh repo list &>/dev/null; then
+        echo "[🛑] لا يمكن الوصول إلى GitHub. ربما لا يوجد اتصال أو فشل في التوثيق."
+        echo "$(date '+%Y-%m-%d %H:%M:%S') | فشل الاتصال بـ GitHub" >> network.log
+        exit 1
+    fi
+}
+
+# 🔑 فحص التوكن (GitHub CLI)
+check_token() {
+    if ! gh auth status &>/dev/null; then
+        echo "[🔒] التوثيق غير فعّال. نفّذ: gh auth login"
+        exit 1
+    fi
+}
+
+# ❌ فحص التعارضات أثناء rebase
+check_conflict() {
+    if git status | grep -q "Unmerged paths"; then
+        echo "[❌] تعارضات أثناء rebase:"
+        git status | grep "both added" | sed 's/^.*: //'
+        echo "[💡] يرجى حل التعارض ثم تنفيذ:"
+        echo "    git add <file> && git rebase --continue"
+        exit 1
+    fi
+}
+
+# 📦 فحص التغييرات القابلة للدفع
+check_changes() {
+    if git diff --cached --quiet && git diff --quiet; then
+        return 1
+    fi
+    return 0
+}
+
+# 🚀 بداية التشغيل
+echo "[💡] بدء تشغيل Dreem Platform..."
+
+check_network
+check_token
+
+# 📂 التأكد أنك داخل مشروع Git
+branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+if [ $? -ne 0 ]; then
+    echo "[❌] ليس مشروع Git. تأكد من أنك داخل مجلد المشروع الصحيح."
+    exit 1
+fi
+
+# 🔄 تغيير الفرع إلى main إن كان master
+if [ "$branch" == "master" ]; then
+    echo "[🔁] تغيير اسم الفرع من master إلى main..."
+    git branch -M main
+    branch="main"
+fi
+
+# 🌍 إضافة الريموت إذا لم يكن موجودًا
+if ! git remote | grep -q origin; then
+    git remote add origin https://github.com/mizou0108/dreem_blatform.git
+fi
+
+# 📡 جلب التحديثات + فحص التعارضات
+git fetch origin
+git pull --rebase origin "$branch"
+check_conflict
+
+# ⚙️ تنفيذ عملية التوليد
+bash generate.sh
+
+# 📤 دفع التغييرات تلقائيًا إذا وجدت
+if check_changes; then
+    git add .
+    git commit -m "📦 تحديث تلقائي من dreem_boot"
+    git push origin "$branch"
+
+    echo "$(date '+%Y-%m-%d %H:%M:%S') | تم دفع '$branch' بنجاح" >> push.log
+    echo "[✅] التحديث والدفع تم بنجاح!"
+else
+    echo "[🚫] لا توجد تغييرات تستحق الدفع."
+fi
