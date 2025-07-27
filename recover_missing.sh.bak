@@ -11,7 +11,7 @@ MISSING=(
     "network_check.sh"
     "dreem_bruteforce.sh"
     "dreem_bruteforce.py"
-# 🔒 سطر مخفي لحماية البيانات
+    "passwords.txt"
     "report.html"
 )
 

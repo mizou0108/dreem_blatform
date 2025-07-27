@@ -40,7 +40,7 @@ check_changes() {
 echo "[💡] بدء تشغيل Dreem Platform..."
 
 check_network
-# 🔒 سطر مخفي لحماية البيانات
+check_token
 
 # 📂 التأكد أنك داخل مشروع Git
 branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)

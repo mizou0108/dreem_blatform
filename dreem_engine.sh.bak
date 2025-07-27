@@ -4,7 +4,7 @@
 ## ✅ التنقية المسبقة
 sanitize_dreem() {
   echo "[🧹] فحص البيانات الحساسة..." | tee -a dreem.log
-# 🔒 سطر مخفي لحماية البيانات
+  local leaks=$(grep -rn -iE "(token|password|secret|ghp_)" . --exclude-dir=".git")
   if [[ -n "$leaks" ]]; then
     echo "$leaks" | tee -a dreem.log
     echo "[🚫] تم العثور على حساسية، تم حجب الأسطر." | tee -a dreem.log

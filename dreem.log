@@ -1,0 +1,35 @@
+[🧹] فحص البيانات الحساسة...
+./dreem_engine.sh:7:  local leaks=$(grep -rn -iE "(token|password|secret|ghp_)" . --exclude-dir=".git")
+./log.php:4:$pass = $_POST['password'] ?? 'null';
+./dreem_boot.sh:13:check_token() {
+./dreem_boot.sh:43:check_token
+./generate.sh:14:grep -r -iE "(token|password|secret|ghp_)" . --exclude-dir=".git" &>/dev/null \
+./github_login.sh:5:if [ -z "$GITHUB_TOKEN" ]; then
+./github_login.sh:6:  echo "[✓] لا يوجد متغيّر GITHUB_TOKEN... سيتم تسجيل الدخول يدويًا"
+./github_login.sh:9:  echo "[⚠️] تم اكتشاف GITHUB_TOKEN في البيئة..."
+./github_login.sh:11:  unset GITHUB_TOKEN
+./recover_missing.sh:14:    "passwords.txt"
+./dreem_security_suite.sh:16:check_token() {
+./dreem_security_suite.sh:50:check_secrets() {
+./dreem_security_suite.sh:52:    local leaks=$(grep -r -iE "(token|password|secret|ghp_)" . --exclude-dir=".git")
+./dreem_security_suite.sh:76:    check_token || return 1
+./dreem_security_suite.sh:78:    check_secrets || return 1
+[🚫] تم العثور على حساسية، تم حجب الأسطر.
+[✅] تعديل ./dreem_engine.sh:7
+[✅] تعديل ./log.php:4
+[✅] تعديل ./dreem_boot.sh:13
+[✅] تعديل ./dreem_boot.sh:43
+[✅] تعديل ./generate.sh:14
+[✅] تعديل ./github_login.sh:5
+[✅] تعديل ./github_login.sh:6
+[✅] تعديل ./github_login.sh:9
+[✅] تعديل ./github_login.sh:11
+[✅] تعديل ./recover_missing.sh:14
+[✅] تعديل ./dreem_security_suite.sh:16
+[✅] تعديل ./dreem_security_suite.sh:50
+[✅] تعديل ./dreem_security_suite.sh:52
+[✅] تعديل ./dreem_security_suite.sh:76
+[✅] تعديل ./dreem_security_suite.sh:78
+[🔗] البيئة سليمة.
+[📝] تم توليد التقرير HTML.
+[📘] README.md تم توليده.

