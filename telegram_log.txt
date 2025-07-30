@@ -1,0 +1,62 @@
+[2025-07-30 20:21:05] ⚠️ فشل إرسال Telegram: {"ok":false,"error_code":400,"description":"Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 137"}
+[2025-07-30 20:24:14] ❌ الملف غير موجود: secrets.txt
+[2025-07-30 20:24:46] ❌ الملف غير موجود: input/secrets.txt
+[2025-07-30 20:34:27] ❌ لا يوجد ملفات في 'input'
+[2025-07-30 20:38:30] ❌ فشل التوقيع الجماعي: لا يوجد ملفات
+[2025-07-30 20:39:29] ✅ تم توقيع: file1.txt
+[2025-07-30 20:39:29] ✅ تم توقيع: file2.txt
+[2025-07-30 20:39:29] ✅ تم توقيع: file3.txt
+⚙️ بدء Dreem Fortress™...
+{"ok":false,"error_code":404,"description":"Not Found"}[2025-07-30 21:05:49] ✅ file1.txt | 814ccfe75a1c5bef4d1cf7c2afe2020a9c0c49f7f6611104d67fc10df10e6022
+{"ok":false,"error_code":404,"description":"Not Found"}[2025-07-30 21:05:55] ✅ file2.txt | 068c76c6851d39a819f59ec5a1d1bff14f4b24f267b977f19bdaf9846788c3f4
+{"ok":false,"error_code":404,"description":"Not Found"}[2025-07-30 21:05:56] ✅ file3.txt | 777040eb6170f52232dadc0a03ac25294db66628324c4fa065e60e1c4295cfc6
+🎯 تم إنشاء نسخة مضغوطة: dreem_backup_20250730_2105.zip
+[BOT] تلقي أمر: /ping
+[BOT] تلقي أمر: سلام
+[BOT] تلقي أمر: /check
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: /ping
+[BOT] تلقي أمر: سلام
+[BOT] تلقي أمر: /check
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: /ping
+[BOT] تلقي أمر: سلام
+[BOT] تلقي أمر: /check
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 
+[BOT] تلقي أمر: 

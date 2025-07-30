@@ -1,0 +1,17 @@
+[
+  {
+    "file": "file1.txt",
+    "signature": "814ccfe75a1c5bef4d1cf7c2afe2020a9c0c49f7f6611104d67fc10df10e6022",
+    "timestamp": "2025-07-30 21:05:49"
+  },
+  {
+    "file": "file2.txt",
+    "signature": "068c76c6851d39a819f59ec5a1d1bff14f4b24f267b977f19bdaf9846788c3f4",
+    "timestamp": "2025-07-30 21:05:55"
+  },
+  {
+    "file": "file3.txt",
+    "signature": "777040eb6170f52232dadc0a03ac25294db66628324c4fa065e60e1c4295cfc6",
+    "timestamp": "2025-07-30 21:05:56"
+  }
+]
